@@ -1,10 +1,31 @@
-import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
+import ThemeProvider from './context/themeProvider'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import SplashScreen from './components/SplashScreen.jsx'
+
+
+
+
+const router = createBrowserRouter([
+  {
+    path:"/",
+    element:<SplashScreen/>
+},
+{
+  path: "/portfolio",
+  element: <App />
+}
+])
+
+
+
+
 
 createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <App />
-  </StrictMode>,
+  <ThemeProvider>
+    <RouterProvider router={router} />
+
+  </ThemeProvider>
 )

@@ -52,7 +52,7 @@ const  Navbar=()=> {
                 : "bg-transparent"
                 }`}
         >
-            <div className=" w-4/5 mx-auto  text-gray-300">
+            <div className=" md:w-4/5 px-4 mx-auto  text-gray-300">
                 <div className="flex items-center justify-between">
                     <motion.h1
                         className="text-xl sm:text-2xl font-bold text-emerald-300 tracking-widest uppercase cursor-pointer  "

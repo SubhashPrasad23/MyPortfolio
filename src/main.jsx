@@ -1,7 +1,6 @@
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
-import ThemeProvider from './context/themeProvider'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import SplashScreen from './components/SplashScreen.jsx'
 
@@ -24,8 +23,6 @@ const router = createBrowserRouter([
 
 
 createRoot(document.getElementById('root')).render(
-  <ThemeProvider>
     <RouterProvider router={router} />
 
-  </ThemeProvider>
 )
